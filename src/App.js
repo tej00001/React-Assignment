@@ -1,6 +1,6 @@
 // import ExpenseItems from "./components/ExpenseList/ExpenseItems";//when we use maps
 // import React from 'react'; if we write code in react object
- import Expenses from "./components/ExpenseList/Expenses";
+import Expenses from "./components/ExpenseList/Expenses";
 const expensesData = [
   {
     id: "el",
@@ -39,8 +39,6 @@ const expensesData = [
   },
 ];
 
-
-
 function App() {
   return (
     <div>
@@ -51,11 +49,10 @@ function App() {
       
       ))} */}
 
-       <Expenses expenses={expensesData} /> 
+      <Expenses expenses={expensesData} />
       {/* return React.createElement('div',{},
   React.createElement(Expenses,{items:expenses})); react object code */}
     </div>
-    
   );
 }
 
