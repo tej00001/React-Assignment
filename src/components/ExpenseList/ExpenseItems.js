@@ -32,7 +32,7 @@ const expenseHandler=()=>{
           LocationOfExpenditure={props.LocationOfExpenditure}
         ></ExpenseDetails>
       </div>
-      <button onClick={expenseHandler}>Add Expenses</button>
+      <button onClick={expenseHandler}>Change Title</button>
 
     </Card>
   );
