@@ -12,6 +12,29 @@ const ExpenseForm = () => {
   //   const ChangeTitleHandler =(event)=>{ using react to appear
   //  console.log(event.target.value)
   //     }
+  // const [UserInput, setUserInput] = useState({
+  //   enteredTitle: "",
+  //   enteredDate: "",
+  //   enteredAmount: "",
+  // });
+  // const handleTitleChange = (event) => {
+  //   setUserInput({
+  //     ...UserInput,
+  //     enteredTitle: event.target.value,
+  //   });
+  // };
+  // const ChangeAmountHandler = (event) => {
+  //   setUserInput({
+  //     ...UserInput,
+  //     enteredDate: event.target.value,
+  //   });
+  // };
+  // const ChangeDateHandler = (event) => {
+  //   setUserInput({
+  //     ...UserInput,
+  //     enteredAmount: event.target.value,
+  //   });
+  // };
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -29,12 +52,22 @@ const ExpenseForm = () => {
     setEnteredDate(event.target.value);
     console.log("enteredDate");
   };
+  const submitHandler = (event) => {
+    event.preventDefault();
+    alert("You have submitted the form.");
 
+    const Data = {
+      name: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate),
+    };
+    console.log(Data);
+  };
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control label">
-          <label id="tej">Title</label>
+          <label>Title</label>
           <input type="text" onChange={ChangeTitleHandler} />
         </div>
         <div className="new-expense__control label">
