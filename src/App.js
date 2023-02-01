@@ -1,10 +1,11 @@
 // import ExpenseItems from "./components/ExpenseList/ExpenseItems";//when we use maps
 // import React from 'react'; if we write code in react object
 import Expenses from "./components/ExpenseList/Expenses";
-import NewExpenseForm from "./components/ExpenseFormData/NewExpenseForm";
+//import ExpenseForm from "./components/ExpenseFormData/ExpenseForm";
+//import NewExpenseForm from "./components/ExpenseFormData/NewExpenseForm";
+import Newone from "./components/UI/NewCard";
 
 function App() {
-
   const expensesData = [
     {
       id: "el",
@@ -42,10 +43,15 @@ function App() {
       LocationOfExpenditure: "bangkok",
     },
   ];
-  
+  // const addExpenseHandler=(expense)=>{ to show in App.js
+  //   console.log("in UI card.js")
+  //   console.log(expense)
+  // }
+
   return (
     <div>
-    <NewExpenseForm/>
+      <Newone />
+      {/* <NewExpenseForm onAddExpense={addExpenseHandler} /> to show in App.js */}
       {/* <h1>let's start</h1>
       <h2>ExpenseItems Details</h2>
       {/* {expensesData.map((any) => ( 
