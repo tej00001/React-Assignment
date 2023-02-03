@@ -18,19 +18,21 @@ function ExpenseItems(props) {
     console.log(name);
   };
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={props.date}></ExpenseDate>
-      <div className="expense-item__description">
-        <h2>{name}</h2>
-        <button onClick={changeHandler}>Add Expenses</button>
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date}></ExpenseDate>
+        <div className="expense-item__description">
+          <h2>{name}</h2>
+          <button onClick={changeHandler}>Add Expenses</button>
 
-        <ExpenseDetails
-          amount={amount}
-          LocationOfExpenditure={props.LocationOfExpenditure}
-        ></ExpenseDetails>
-      </div>
-      <button onClick={expenseHandler}>Change Title</button>
-    </Card>
+          <ExpenseDetails
+            amount={amount}
+            LocationOfExpenditure={props.LocationOfExpenditure}
+          ></ExpenseDetails>
+        </div>
+        <button onClick={expenseHandler}>Change Title</button>
+      </Card>
+    </li>
   );
 }
 
