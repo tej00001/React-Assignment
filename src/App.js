@@ -26,7 +26,7 @@ const Data = [
     id: "ml",
     name: "Movie",
     amount: 1000,
-    date: new Date(2022, 6, 13),
+    date: new Date(2020, 6, 13),
     LocationOfExpenditure: "Imax Hyd",
   },
   {
