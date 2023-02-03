@@ -19,7 +19,7 @@ const Data = [
     id: "bl",
     name: "Shopping",
     amount: 5000,
-    date: new Date(2022, 10, 12),
+    date: new Date(2023, 10, 12),
     LocationOfExpenditure: "Trends",
   },
   {
@@ -33,7 +33,7 @@ const Data = [
     id: "cl",
     name: "Tour",
     amount: 20000,
-    date: new Date(2022, 4, 12),
+    date: new Date(2023, 4, 12),
     LocationOfExpenditure: "goa trip",
   },
   {
