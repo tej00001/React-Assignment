@@ -39,6 +39,7 @@ const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  const [enteredLocation, setEnteredLocation] = useState("");
 
   const ChangeTitleHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -53,6 +54,11 @@ const ExpenseForm = (props) => {
     setEnteredDate(event.target.value);
     console.log("enteredDate");
   };
+  const ChangeLocationHandler = (event) => {
+    setEnteredLocation(event.target.value);
+    console.log("enteredLocationOfExpenditure");
+  };
+
   const submitHandler = (event) => {
     event.preventDefault();
     alert("You have submitted the form.");
@@ -61,6 +67,7 @@ const ExpenseForm = (props) => {
       name: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate),
+      LocationOfExpenditure: enteredLocation,
     };
     //console.log(expenseData);
 
@@ -68,12 +75,13 @@ const ExpenseForm = (props) => {
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+    setEnteredLocation("");
   };
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control label">
-          <label>Title</label>
+          <label>Name</label>
           <input
             type="text"
             value={enteredTitle}
@@ -98,8 +106,17 @@ const ExpenseForm = (props) => {
             onChange={ChangeDateHandler}
           />
         </div>
-        <div className="new-expense__actions">
-          <button type="submit">AddExpenses</button>
+        <div className="new-expense__control label">
+          <label>LocationOfExpenditure</label>
+          <input
+            type="text"
+            value={enteredLocation}
+            onChange={ChangeLocationHandler}
+          />
+
+          <div className="new-expense__actions">
+            <button type="submit">AddExpenses</button>
+          </div>
         </div>
       </div>
     </form>
